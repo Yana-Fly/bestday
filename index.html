@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Свадебное агентство Best Day</title>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <link rel="stylesheet" href="dist/swiper-bundle.min.css">
+    <link rel="stylesheet" href="dist/animate.min.css">
+    <link rel="stylesheet" href="dist/style.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header__container">
+        <div class="logo header__logo">
+            <img src="images/logo.png" class="logo__img" alt="Логотип">
+        </div>
+        <nav class="menu" id="menu">
+            <div class="menu__wrapper">
+                <div class="menu__title center-text"><span class="title">Меню</span></div>
+                <ul class="menu__items">
+                    <li class="menu__item"><a href="#advantages" class="menu__link">О нас</a></li>
+                    <li class="menu__item"><a href="#features" class="menu__link">Услуги</a></li>
+                    <li class="menu__item"><a href="#portfolio" class="menu__link">Портфолио</a></li>
+                    <li class="menu__item"><a href="#reviews" class="menu__link">Отзывы</a></li>
+                    <li class="menu__item"><a href="#contacts" class="menu__link">Контакты</a></li>
+                </ul>
+                <div class="menu__ellipses">
+                    <svg class="ellipse menu__ellipse-big"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         width="115.5px" height="116.5px">
+                        <path fill-rule="evenodd" stroke="rgb(38, 30, 19)" stroke-width="1px" stroke-linecap="butt"
+                              stroke-linejoin="miter" opacity="0.302" fill="none"
+                              d="M30.975,9.556 C44.509,1.757 64.45,-2.762 73.721,5.550 C83.397,13.864 94.683,17.189 101.20,28.186 C107.615,39.632 124.226,62.414 106.624,64.570 C89.22,66.726 95.95,90.591 82.12,98.129 C70.773,104.606 63.424,128.250 46.346,104.61 C29.268,79.874 19.619,92.779 11.967,79.500 C3.430,64.685 -6.456,42.202 9.786,32.843 C26.29,23.483 21.278,15.143 30.975,9.556 Z"/>
+                    </svg>
+                    <svg class="ellipse menu__ellipse-small"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         width="69.5px" height="69.5px">
+                        <path fill-rule="evenodd" stroke="rgb(179, 96, 16)" stroke-width="1px" stroke-linecap="butt"
+                              stroke-linejoin="miter" opacity="0.302" fill="none"
+                              d="M35.477,0.499 C48.49,0.499 60.499,7.287 61.496,13.332 C62.493,19.377 68.499,28.440 68.499,33.860 C68.499,34.835 61.701,42.385 62.366,53.467 C63.31,64.550 49.623,67.221 35.477,67.221 C27.102,67.221 10.309,73.322 13.633,58.881 C16.958,44.441 2.454,43.824 2.454,33.860 C2.454,26.231 -5.40,13.581 9.253,13.581 C23.548,13.581 24.790,0.499 35.477,0.499 Z"/>
+                    </svg>
+                </div>
+                <div id="menu-close" class="close menu__close">
+                    <svg version="1.1" id="modal__close" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 496.096 496.096" fill="#906841B8" xml:space="preserve">
+<g>
+	<g>
+		<path d="M259.41,247.998L493.754,13.654c3.123-3.124,3.123-8.188,0-11.312c-3.124-3.123-8.188-3.123-11.312,0L248.098,236.686
+			L13.754,2.342C10.576-0.727,5.512-0.639,2.442,2.539c-2.994,3.1-2.994,8.015,0,11.115l234.344,234.344L2.442,482.342
+			c-3.178,3.07-3.266,8.134-0.196,11.312s8.134,3.266,11.312,0.196c0.067-0.064,0.132-0.13,0.196-0.196L248.098,259.31
+			l234.344,234.344c3.178,3.07,8.242,2.982,11.312-0.196c2.995-3.1,2.995-8.016,0-11.116L259.41,247.998z"/>
+	</g>
+</g>
+</svg>
+                </div>
+            </div>
+        </nav>
+        <button id="callback" type="button" class="btn btn__secondary callback-btn">
+            <svg version="1.1" class="callback-btn__icon" width="18" height="18" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 384 384" style="enable-background:new 0 0 384 384;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M353.188,252.052c-23.51,0-46.594-3.677-68.469-10.906c-10.719-3.656-23.896-0.302-30.438,6.417l-43.177,32.594
+			c-50.073-26.729-80.917-57.563-107.281-107.26l31.635-42.052c8.219-8.208,11.167-20.198,7.635-31.448
+			c-7.26-21.99-10.948-45.063-10.948-68.583C132.146,13.823,118.323,0,101.333,0H30.813C13.823,0,0,13.823,0,30.813
+			C0,225.563,158.438,384,353.188,384c16.99,0,30.813-13.823,30.813-30.813v-70.323C384,265.875,370.177,252.052,353.188,252.052z"
+        />
+	</g>
+</g>
+            </svg>
+            <span class="callback-btn__text">Заказать звонок</span>
+        </button>
+        <div class="burger" id="burger">
+            <svg class="burger__img"
+                 xmlns="http://www.w3.org/2000/svg"
+                 width="30px" height="19px">
+                <path fill-rule="evenodd"
+                      d="M0.0,0.0 L30.0,0.0 L30.0,2 L0.0,2 L0.0,0.0 Z"/>
+                <path fill-rule="evenodd"
+                      d="M0.0,8.0 L30.0,8.0 L30.0,10.0 L0.0,10.0 L0.0,12.0 Z"/>
+                <path fill-rule="evenodd"
+                      d="M0.0,16.0 L30.0,16.0 L30.0,18.0 L0.0,18.0 L0.0,0.0 Z"/>
+            </svg>
+        </div>
+    </div>
+</header>
+
+<main class="main wow animate__backInLeft">
+    <div class="container main__container">
+        <h1 class="main__title">Организуем свадьбу, о&nbsp;которой вы&nbsp;мечтаете!</h1>
+        <div class="main__image">
+            <img src="images/wedding.png" class="main__img" alt="Организуем свадьбу, о которой вы мечтаете!">
+        </div>
+        <div class="main__info">
+            <div class="main__description">Забудьте обо всех хлопотах и наслаждайтесь своим самым счастливым днем
+                рождения вашей семьи, а мы возьмем на себя всю организацию мероприятия и проконтролируем, чтобы в важный
+                день всё шло по плану!
+            </div>
+            <div class="main__actions actions">
+                <a href="#consultation" class="btn btn__primary">Записаться на консультацию</a>
+                <a href="#features" class="actions__link">Перейти к услугам</a>
+            </div>
+        </div>
+        <div class="ellipses">
+            <svg class="main__ellipse-big ellipse"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="289.5px" height="301.5px">
+                <path fill-rule="evenodd" stroke="rgb(38, 30, 19)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M144.191,0.499 C187.867,0.499 241.510,16.864 253.346,50.605 C265.182,84.346 287.883,108.220 287.883,143.806 C287.883,180.846 296.320,259.440 250.667,240.39 C205.13,220.638 186.411,287.114 144.191,287.114 C107.920,287.114 57.111,334.265 49.502,251.600 C41.894,168.935 0.499,186.779 0.499,143.806 C0.499,95.867 7.932,27.410 60.349,27.410 C112.766,27.410 112.900,0.499 144.191,0.499 Z"/>
+            </svg>
+            <svg class="main__ellipse-small ellipse"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="194.5px" height="196.5px">
+                <path fill-rule="evenodd" stroke="rgb(38, 30, 19)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M96.499,3.499 C122.596,3.499 146.299,-12.365 163.565,30.810 C180.831,73.985 192.499,72.576 192.499,99.499 C192.499,121.404 194.395,156.887 172.813,157.751 C151.230,158.614 127.614,195.499 96.499,195.499 C68.70,195.499 43.942,166.95 24.949,163.505 C5.956,160.914 0.499,124.89 0.499,99.499 C0.499,77.178 3.630,46.375 20.896,40.331 C38.162,34.286 65.802,3.499 96.499,3.499 Z"/>
+            </svg>
+        </div>
+        <div class="ellipses-mobile">
+            <svg class="main__ellipse-big_mobile ellipse"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="167.5px" height="174.5px">
+                <path fill-rule="evenodd" stroke="rgb(38, 30, 19)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" opacity="0.302" fill="none"
+                      d="M83.322,0.499 C108.496,0.499 139.415,9.936 146.238,29.394 C153.60,48.850 166.144,62.618 166.144,83.139 C166.144,104.499 171.7,149.822 144.693,138.633 C118.379,127.445 107.657,165.780 83.322,165.780 C62.416,165.780 33.130,192.971 28.744,145.300 C24.359,97.630 0.499,107.921 0.499,83.139 C0.499,55.494 4.784,16.17 34.996,16.17 C65.209,16.17 65.286,0.499 83.322,0.499 Z"/>
+            </svg>
+            <svg class="main__ellipse-small_mobile ellipse"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="125.5px" height="127.5px">
+                <path fill-rule="evenodd" stroke="rgb(38, 30, 19)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" opacity="0.302" fill="none"
+                      d="M62.489,2.338 C79.341,2.338 94.646,-7.921 105.795,19.999 C116.945,47.919 124.479,47.9 124.479,64.419 C124.479,78.584 125.704,101.529 111.767,102.88 C97.830,102.646 82.581,126.499 62.489,126.499 C44.132,126.499 28.551,107.484 16.287,105.809 C4.23,104.133 0.499,80.320 0.499,64.419 C0.499,49.983 2.521,30.65 13.670,26.155 C24.819,22.247 42.667,2.338 62.489,2.338 Z"/>
+            </svg>
+        </div>
+    </div>
+</main>
+
+<section class="advantages wow animate__backInUp" id="advantages">
+    <div class="container advantages__container">
+        <h2 class="advantages__title center-text">
+            <span class="title">Почему стоит выбрать агенство Best Day</span>
+        </h2>
+        <div class="advantages__items">
+            <div class="advantages__item">
+                <div class="advantages__number">01</div>
+                <div class="advantages__text">Первые предложения по концепции мероприятия уже в&nbsp;течение суток.
+                </div>
+            </div>
+            <div class="advantages__item">
+                <div class="advantages__number">02</div>
+                <div class="advantages__text">Никаких шаблонов и границ, Ваша свадьба будет уникальной!</div>
+            </div>
+            <div class="advantages__item">
+                <div class="advantages__number">03</div>
+                <div class="advantages__text">Реализация даже самых сложных идей.</div>
+            </div>
+            <div class="advantages__item">
+                <div class="advantages__number">04</div>
+                <div class="advantages__text">Экономия вашего времени, денег и нервов.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="trust wow animate__slideInLeft">
+    <div class="container trust__container">
+
+        <h2 class="trust__title"><span class="title">Довертесь нам</span></h2>
+        <div class="trust__subtitle">И ваша свадьба станет незабываемой!</div>
+        <div class="trust__image">
+            <img src="images/trust_us.png" class="trust__img" alt="Довертесь нам">
+        </div>
+        <div class="trust__description">
+            <p class="trust__text">Дорогие наши женихи и невесты, а также их родители! Позвольте себе отдохнуть на
+                вашем празднике, а не заниматься организационными вопросами! Поверьте, благодаря нашему опыту и базе
+                подрядчиков с которой мы работаем не первый год, вы сможете сэкономить уже в первые недели
+                подготовки. Поэтому не сомневайтесь, а записывайтесь на бесплатную консультацию. Доверьте ваш
+                особенный день профессионалам!
+            </p>
+            <p class="trust__text trust__text-main">Организация свадьбы командой “BestDay” стоит 400$.</p>
+            <p class="trust__text trust__text-main">Координация свадебного дня, т.е. контроль всех вопросов именно в
+                день свадьбы, обойдётся вам в 180$.</p>
+        </div>
+        <div class="ellipses">
+            <svg class="trust__ellipse-big ellipse"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="440.5px" height="435.5px">
+                <path fill-rule="evenodd" stroke="rgb(216, 170, 126)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M222.499,0.499 C269.500,0.499 336.0,3.193 348.539,40.835 C361.77,78.476 439.499,144.653 439.499,217.499 C439.499,274.497 434.873,366.654 381.583,365.85 C328.294,363.517 285.347,434.499 222.499,434.499 C159.500,434.499 149.333,364.776 63.129,364.776 C-23.74,364.776 5.499,274.346 5.499,217.499 C5.499,161.933 26.252,60.309 60.733,72.856 C95.215,85.403 158.220,0.499 222.499,0.499 Z"/>
+            </svg>
+            <svg class="trust__ellipse-small ellipse"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="226.5px" height="225.5px">
+                <path fill-rule="evenodd" stroke="rgb(38, 30, 19)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M112.499,0.499 C149.390,0.499 188.267,45.852 202.521,45.852 C216.774,45.852 224.499,87.534 224.499,112.499 C224.499,136.110 226.662,176.74 204.719,176.74 C182.776,176.74 150.745,224.499 112.499,224.499 C82.693,224.499 57.471,190.519 30.357,188.984 C3.243,187.449 0.499,144.25 0.499,112.499 C0.499,80.770 39.596,59.975 34.894,31.744 C30.192,3.513 82.373,0.499 112.499,0.499 Z"/>
+            </svg>
+        </div>
+        <div class="ellipses-mobile">
+            <svg class="trust__ellipse-big_mobile ellipse"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="222.5px" height="219.5px">
+                <path fill-rule="evenodd" stroke="rgb(216, 170, 126)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" opacity="0.302" fill="none"
+                      d="M112.142,0.499 C135.828,0.499 169.341,1.852 175.660,20.759 C181.979,39.667 221.500,72.908 221.500,109.498 C221.500,138.129 219.169,184.420 192.313,183.632 C165.458,182.844 143.814,218.499 112.142,218.499 C80.393,218.499 75.269,183.477 31.826,183.477 C-11.616,183.477 2.784,138.53 2.784,109.498 C2.784,81.588 13.242,30.541 30.619,36.844 C47.996,43.147 79.748,0.499 112.142,0.499 Z"/>
+            </svg>
+            <svg class="trust__ellipse-small_mobile ellipse"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="135.5px" height="133.5px">
+                <path fill-rule="evenodd" stroke="rgb(38, 30, 19)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" opacity="0.302" fill="none"
+                      d="M86.724,6.633 C107.112,12.577 121.288,43.917 129.166,46.214 C137.43,48.511 134.594,72.800 130.569,86.603 C126.763,99.656 121.515,122.100 109.388,118.564 C97.261,115.28 71.751,136.639 50.614,130.476 C34.141,125.673 25.679,102.821 10.941,97.603 C-3.796,92.385 1.687,67.935 6.769,50.506 C11.884,32.963 36.844,27.767 38.797,11.401 C40.749,-4.964 70.74,1.778 86.724,6.633 Z"/>
+            </svg>
+        </div>
+
+    </div>
+</section>
+
+<section class="path wow animate__fadeInDownBig">
+    <div class="container path__container">
+        <h2 class="path__title center-text"><span class="title">Путь создания свадьбы вашей мечты</span></h2>
+        <div class="path__steps">
+            <div class="path__step path__step-1 wow animate__backInLeft">
+                <div class="path__step-number">Шаг 1
+                    <svg class="steps-line-mobile steps-line-mobile-1"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         width="226.5px" height="25.5px">
+                        <path fill-rule="evenodd" stroke="rgb(209, 186, 158)" stroke-width="1px" stroke-linecap="butt"
+                              stroke-linejoin="miter" fill="none"
+                              d="M224.499,8.437 C224.499,8.437 189.72,-4.928 164.679,6.157 C139.591,17.558 64.591,35.296 54.66,13.700 C43.522,-7.936 1.859,9.437 1.859,9.437 "/>
+                    </svg>
+                </div>
+
+                <div class="path__step-text">Звонок или удобный для вас вид связи. Уточнение данных и количество
+                    приглашенных.
+                </div>
+            </div>
+            <div class="path__step path__step-2 wow animate__backInLeft">
+                <div class="path__step-number">Шаг 2
+                    <svg class="steps-line-mobile steps-line-mobile-2"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         width="225.5px" height="18.5px">
+                        <path fill-rule="evenodd" stroke="rgb(209, 186, 158)" stroke-width="1px" stroke-linecap="butt"
+                              stroke-linejoin="miter" fill="none"
+                              d="M223.499,8.452 C223.499,8.452 93.317,-7.530 89.258,9.55 C85.199,25.641 0.859,9.453 0.859,9.453 "/>
+                    </svg>
+                </div>
+                <div class="path__step-text">Встреча в удобном для вас месте. К первой встрече мы готовим варианты
+                    концепций; мест проведения; перечень возможных услуг. Вы сразу понимаете какой может быть ваша
+                    свадьба и приблизительный бюджет.
+                </div>
+            </div>
+            <div class="path__step path__step-3 wow animate__backInRight">
+                <div class="path__step-number">Шаг 3
+                    <svg class="steps-line-mobile steps-line-mobile-3"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         width="224.5px" height="37.5px">
+                        <path fill-rule="evenodd" stroke="rgb(209, 186, 158)" stroke-width="1px" stroke-linecap="butt"
+                              stroke-linejoin="miter" fill="none"
+                              d="M223.499,18.468 C223.499,18.468 102.445,57.572 108.534,18.984 C114.623,-19.602 0.859,19.468 0.859,19.468 "/>
+                    </svg>
+                </div>
+                <div class="path__step-text">Подписание договора. Внесение предоплаты.
+                </div>
+            </div>
+            <div class="path__step path__step-4 wow animate__backInRight">
+                <div class="path__step-number">Шаг 4
+                    <svg class="steps-line-mobile steps-line-mobile-4"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         width="225.5px" height="23.5px">
+                        <path fill-rule="evenodd" stroke="rgb(209, 186, 158)" stroke-width="1px" stroke-linecap="butt"
+                              stroke-linejoin="miter" fill="none"
+                              d="M224.499,11.116 C224.499,11.116 166.955,28.722 160.360,9.411 C153.765,-9.899 83.847,11.205 67.574,18.696 C42.747,30.125 0.484,12.138 0.484,12.138 "/>
+                    </svg>
+                </div>
+                <div class="path__step-text">Утверждение идей и сценария свадьбы. Определение места проведения сочетания
+                    - выездная регистрация или ЗАГС. Мы берем у вас интервью, чтобы создать особенную, максимально “Вашу
+                    свадьбу”.
+                </div>
+            </div>
+            <div class="path__step path__step-5 wow animate__backInRight">
+                <div class="path__step-number">Шаг 5
+                    <svg class="steps-line-mobile steps-line-mobile-5"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         width="224.5px" height="13.5px">
+                        <path fill-rule="evenodd" stroke="rgb(209, 186, 158)" stroke-width="1px" stroke-linecap="butt"
+                              stroke-linejoin="miter" fill="none"
+                              d="M223.499,6.499 C223.499,6.499 167.19,19.618 111.687,7.1 C56.355,-5.615 0.859,7.499 0.859,7.499 "/>
+                    </svg>
+                </div>
+                <div class="path__step-text">Подбор исполнителей. Кастинг ведущих, фотографов, видеографов и прочих
+                    подрядчиков. Согласование шоу программы.
+                </div>
+            </div>
+            <div class="path__step path__step-6 wow animate__backInLeft">
+                <div class="path__step-number">Шаг 6
+                    <svg class="steps-line-mobile steps-line-mobile-6"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         width="224.5px" height="31.5px">
+                        <path fill-rule="evenodd" stroke="rgb(209, 186, 158)" stroke-width="1px" stroke-linecap="butt"
+                              stroke-linejoin="miter" fill="none"
+                              d="M222.250,15.483 C222.250,15.483 99.999,-16.358 110.752,15.991 C121.505,48.341 0.484,16.494 0.484,16.494 "/>
+                    </svg>
+                </div>
+                <div class="path__step-text">Полный цикл координации свадебного дня. Команда свадебных распорядителей
+                    будет находиться на площадке с самого начала торжества и до его окончания.
+                </div>
+            </div>
+            <div class="path__step path__step-7 wow animate__backInLeft">
+                <div class="path__step-number">Шаг 7
+                    <svg class="steps-line-mobile steps-line-mobile-7"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink"
+                         width="224.5px" height="32.5px">
+                        <path fill-rule="evenodd" stroke="rgb(209, 186, 158)" stroke-width="1px" stroke-linecap="butt"
+                              stroke-linejoin="miter" fill="none"
+                              d="M223.499,19.530 C223.499,19.530 224.276,44.321 166.94,19.787 C141.52,9.228 86.447,-8.84 76.239,9.804 C66.32,27.693 0.859,20.530 0.859,20.530 "/>
+                    </svg>
+                </div>
+                <div class="path__step-text">Передача фото и видео.
+                </div>
+            </div>
+        </div>
+        <div class="steps-lines">
+            <svg class="steps-line steps-line-1"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="794.5px" height="43.5px">
+                <path fill-rule="evenodd" stroke="rgb(209, 186, 158)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M793.499,22.464 C793.499,22.464 483.794,67.545 361.950,22.464 C240.106,-22.615 0.683,22.464 0.683,22.464 "/>
+            </svg>
+            <svg class="steps-line steps-line-2"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="178.5px" height="16.5px">
+                <path fill-rule="evenodd" stroke="rgb(209, 186, 158)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M0.499,7.499 C0.499,7.499 26.786,-6.876 96.566,7.499 C166.346,21.876 176.499,7.499 176.499,7.499 "/>
+            </svg>
+            <svg class="steps-line steps-line-3"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="297.5px" height="234.5px">
+                <path fill-rule="evenodd" stroke="rgb(209, 186, 158)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M0.545,0.499 C0.545,0.499 252.839,7.817 228.944,60.499 C205.48,113.182 237.672,96.695 290.44,139.499 C342.416,182.304 2.0,233.499 2.0,233.499 "/>
+            </svg>
+            <svg class="steps-line steps-line-3_laptop"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="264.5px" height="208.5px">
+                <path fill-rule="evenodd" stroke="rgb(209, 186, 158)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M1.305,0.499 C1.305,0.499 224.926,6.985 203.746,53.681 C182.567,100.376 211.483,85.762 257.903,123.702 C304.322,161.642 2.594,207.19 2.594,207.19 "/>
+            </svg>
+            <svg class="steps-line steps-line-4"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="176.5px" height="13.5px">
+                <path fill-rule="evenodd" stroke="rgb(209, 186, 158)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M175.499,6.499 C175.499,6.499 131.358,19.617 88.114,7.1 C44.871,-5.613 1.499,7.499 1.499,7.499 "/>
+            </svg>
+            <svg class="steps-line steps-line-5"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="181.5px" height="14.5px">
+                <path fill-rule="evenodd" stroke="rgb(209, 186, 158)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M0.499,6.499 C0.499,6.499 35.81,-6.942 92.384,6.499 C149.687,19.942 179.499,6.499 179.499,6.499 "/>
+            </svg>
+            <svg class="steps-line steps-line-6"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="230.5px" height="242.5px">
+                <path fill-rule="evenodd" stroke="rgb(209, 186, 158)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M226.499,2.499 C226.499,2.499 178.247,-1.241 136.684,49.151 C105.329,87.168 86.160,90.900 24.499,127.499 C-73.157,185.466 177.367,259.473 228.499,235.499 "/>
+            </svg>
+            <svg class="steps-line steps-line-6_laptop"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="184.5px" height="185.5px">
+                <path fill-rule="evenodd" stroke="rgb(209, 186, 158)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M180.563,2.283 C180.563,2.283 142.237,0.558 109.223,37.706 C84.318,66.573 69.92,69.407 20.116,97.198 C-57.452,141.213 141.538,197.408 182.152,179.204 "/>
+            </svg>
+            <svg class="steps-line steps-line-7"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="177.5px" height="12.5px">
+                <path fill-rule="evenodd" stroke="rgb(209, 186, 158)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M0.500,5.499 C0.500,5.499 5.511,-4.143 75.402,5.499 C145.293,15.143 175.499,5.499 175.499,5.499 "/>
+            </svg>
+            <svg class="steps-line steps-line-7_laptop"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="184.5px" height="185.5px">
+                <path fill-rule="evenodd" stroke="rgb(209, 186, 158)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M3.436,182.716 C3.436,182.716 41.762,185.558 74.776,147.293 C99.681,118.426 114.907,115.592 163.883,87.801 C241.452,43.786 42.461,-12.408 1.847,5.795 "/>
+            </svg>
+            <svg class="steps-line steps-line-8"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="949.5px" height="50.5px">
+                <path fill-rule="evenodd" stroke="rgb(209, 186, 158)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M0.499,24.499 C0.499,24.499 288.812,-28.42 485.773,24.499 C682.733,77.42 947.500,24.499 947.500,24.499 "/>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<section class="features" id="features">
+    <div class="container features__container">
+        <h2 class="features__title center-text wow animate__backInDown"><span class="title">Наши услуги</span></h2>
+        <div class="features__card features__card_big wow animate__backInLeft">
+            <div class="features__image">
+                <img src="images/features-1.png" class="features__img" alt="Свадьба под ключ">
+            </div>
+            <div class="features__info">
+                <h3 class="features__subtitle">Свадьба под ключ</h3>
+                <ul class="features__list">
+                    <li class="features__item">Создадим концепцию</li>
+                    <li class="features__item">Подберем ЗАГС или место для выездной регистрации</li>
+                    <li class="features__item">Напишем сценарий</li>
+                    <li class="features__item">Подберем артистов</li>
+                    <li class="features__item">Организуем кейтеринг и праздничное оформление</li>
+                    <li class="features__item">Доставим молодоженов и гостей на праздник</li>
+                    <li class="features__item">Проконтролируем работу всех участников</li>
+                    <li class="features__item">Сделаем все, чтобы Ваша свадьба стала идеальной</li>
+                </ul>
+            </div>
+            <div class="features__action">
+                <a href="#consultation" class="btn btn__secondary features__btn">Рассчитать стоимость</a>
+            </div>
+        </div>
+        <div class="features__card features__card_small wow animate__backInRight">
+            <div class="features__image">
+                <img src="images/features-2.png" class="features__img" alt="Координация свадьбы">
+            </div>
+            <div class="features__info">
+                <h3 class="features__subtitle">Координация свадьбы</h3>
+                <ul class="features__list">
+                    <li class="features__item">Проконтролируем своевременную явку всех участников</li>
+                    <li class="features__item">Доставим молодоженов и гостей</li>
+                    <li class="features__item">Проследим за соблюдением сценария мероприятия</li>
+                    <li class="features__item">Решим любые возникающие вопросы</li>
+                </ul>
+            </div>
+            <div class="features__action">
+                <a href="#consultation" class="btn btn__secondary features__btn">Рассчитать стоимость</a>
+            </div>
+        </div>
+        <div class="ellipses">
+            <svg class="ellipse features__ellipse-big"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="409.5px" height="385.5px">
+                <path fill-rule="evenodd" stroke="rgb(38, 30, 19)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M3.592,150.307 C20.508,84.163 79.789,41.917 130.847,15.953 C181.906,-10.10 199.360,4.55 234.983,13.165 C285.191,26.5 243.377,17.580 350.480,98.794 C457.582,180.8 385.312,192.997 372.126,244.556 C360.23,291.881 382.534,381.75 293.479,355.609 C204.424,330.143 195.178,395.622 140.734,381.699 C107.485,373.195 52.0,348.9 55.553,334.116 C59.106,320.224 -13.930,218.825 3.592,150.307 Z"/>
+            </svg>
+            <svg class="ellipse features__ellipse-small"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="268.5px" height="264.5px">
+                <path fill-rule="evenodd" stroke="rgb(125, 113, 96)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M136.186,0.523 C177.358,0.523 237.27,-1.666 238.181,49.188 C239.335,100.44 267.499,100.619 267.499,132.11 C267.499,166.12 254.229,221.496 233.459,220.340 C212.689,219.185 174.752,263.499 136.186,263.499 C97.214,263.499 93.546,194.75 38.159,219.502 C-17.227,244.930 4.872,165.607 4.872,132.11 C4.872,96.851 15.717,37.855 41.103,41.322 C66.488,44.790 98.776,0.523 136.186,0.523 Z"/>
+            </svg>
+        </div>
+        <div class="ellipses-mobile">
+            <svg class="ellipse features__ellipse-big_mobile"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="181.5px" height="171.5px">
+                <path fill-rule="evenodd" stroke="rgb(38, 30, 19)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" opacity="0.302" fill="none"
+                      d="M1.700,66.805 C9.176,37.413 35.373,18.640 57.937,7.102 C80.501,-4.434 88.215,1.815 103.957,5.863 C126.145,11.570 107.667,7.826 154.997,43.915 C202.328,80.4 170.390,85.776 164.563,108.687 C159.215,129.716 169.163,169.353 129.808,158.36 C90.452,146.720 86.366,175.816 62.307,169.629 C47.613,165.850 23.93,154.659 24.663,148.485 C26.233,142.312 -6.42,97.253 1.700,66.805 Z"/>
+            </svg>
+            <svg class="ellipse features__ellipse-small_mobile"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="186.5px" height="183.5px">
+                <path fill-rule="evenodd" stroke="rgb(125, 113, 96)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" opacity="0.302" fill="none"
+                      d="M94.514,0.515 C123.42,0.515 164.386,0.999 165.185,34.193 C165.985,69.385 185.499,69.784 185.499,91.507 C185.499,115.36 176.305,153.432 161.914,152.632 C147.522,151.832 121.236,182.499 94.514,182.499 C67.512,182.499 64.970,134.456 26.593,152.53 C-11.782,169.649 3.529,114.756 3.529,91.507 C3.529,67.176 11.43,26.350 28.633,28.749 C46.222,31.149 68.594,0.515 94.514,0.515 Z"/>
+            </svg>
+        </div>
+
+    </div>
+</section>
+
+<section class="portfolio wow animate__fadeInDownBig" id="portfolio">
+    <div class="container portfolio__container">
+        <h2 class="portfolio__title center-text"><span class="title">Наши молодожены</span></h2>
+        <div class="swiper portfolio-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="swiper-image">
+                        <img class="swiper-img" src="images/newlyweds/dmitry_ksenia.png"
+                             alt="Галерея свадебных фото Дмитрия и Ксении">
+                    </div>
+                    <div class="portfolio__action">
+                        <button class="btn btn__primary portfolio__btn">Дмитрий и Ксения</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-image">
+                        <img class="swiper-img" src="images/newlyweds/mark_anastasia.png"
+                             alt="Галерея свадебных фото Марка и Анастасии">
+                    </div>
+                    <div class="portfolio__action">
+                        <button class="btn btn__primary portfolio__btn">Марк и Анастасия</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-image">
+                        <img class="swiper-img" src="images/newlyweds/ivan_maria.png"
+                             alt="Галерея свадебных фото Ивана и Марии">
+                    </div>
+                    <div class="portfolio__action">
+                        <button class="btn btn__primary portfolio__btn">Иван и Мария</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-image">
+                        <img class="swiper-img" src="images/newlyweds/michail_tatiana.png"
+                             alt="Галерея свадебных фото Михаила и Татьяны">
+                    </div>
+                    <div class="portfolio__action">
+                        <button class="btn btn__primary portfolio__btn">Михаил и Татьяна</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-image">
+                        <img class="swiper-img" src="images/newlyweds/sergey_marina.png"
+                             alt="Галерея свадебных фото Сергея и Марины">
+                    </div>
+                    <div class="portfolio__action">
+                        <button class="btn btn__primary portfolio__btn">Сергей и Марина</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-image">
+                        <img class="swiper-img" src="images/newlyweds/dmitriy_svetlana.png"
+                             alt="Галерея свадебных фото Дмитрия и Светланы">
+                    </div>
+                    <div class="portfolio__action">
+                        <button class="btn btn__primary portfolio__btn">Дмитрий и Светлана</button>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-image">
+                        <img class="swiper-img" src="images/newlyweds/alexandr_galina.png"
+                             alt="Галерея свадебных фото Александра и Галины">
+                    </div>
+                    <div class="portfolio__action">
+                        <button class="btn btn__primary portfolio__btn">Александр и Галина</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next button-next"></div>
+        <div class="swiper-button-prev button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<section class="reviews" id="reviews">
+    <div class="container reviews__container">
+        <div class="reviews__left wow animate__backInLeft">
+            <h2 class="reviews__title center-text"><span class="title">Отзывы</span></h2>
+            <div class="swiper reviews_swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="reviews__image">
+                            <img class="review__img" src="images/newlyweds/nikita_ekaterina.png" alt="Отзыв">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="reviews__image">
+                            <img class="review__img" src="images/newlyweds/kamil_alsu.png" alt="Отзыв">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="reviews__image">
+                            <img class="review__img" src="images/newlyweds/kirill_uliya.jpg" alt="Отзыв">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="reviews__image">
+                            <img class="review__img" src="images/newlyweds/pavel_ekaterina.png" alt="Отзыв">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reviews__card card wow animate__backInRight">
+            <div class="swiper reviews_text_swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide review">
+                        <div class="review__item">
+                            <h3 class="review__title">
+                                <svg class="review__quote" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     width="58" height="52" viewBox="0 0 508.044 508.044"
+                                     style="enable-background:new 0 0 508.044 508.044;"
+                                     xml:space="preserve">
+<g>
+	<g>
+		<path d="M0.108,352.536c0,66.794,54.144,120.938,120.937,120.938c66.794,0,120.938-54.144,120.938-120.938
+			s-54.144-120.937-120.938-120.937c-13.727,0-26.867,2.393-39.168,6.61C109.093,82.118,230.814-18.543,117.979,64.303
+			C-7.138,156.17-0.026,348.84,0.114,352.371C0.114,352.426,0.108,352.475,0.108,352.536z"/>
+        <path d="M266.169,352.536c0,66.794,54.144,120.938,120.938,120.938s120.938-54.144,120.938-120.938S453.9,231.599,387.106,231.599
+			c-13.728,0-26.867,2.393-39.168,6.61C375.154,82.118,496.875-18.543,384.04,64.303C258.923,156.17,266.034,348.84,266.175,352.371
+			C266.175,352.426,266.169,352.475,266.169,352.536z"/>
+	</g>
+</g>
+</svg>
+                                <span class="review__name">Никита и Екатерина</span>
+                            </h3>
+                            <div class="review__text">
+                                <p class="review__paragraph">С удовольствием хотим сказать огромное спасибо всей команде
+                                    BestDay. Ребята,
+                                    благодаря вам, наша свадьба получилась именно такой, какой мы и представляли!
+                                    Вернее, как только мы к вам обратились, мы не представляли её вообще и не знали с
+                                    чего начать. С самого начала нашего сотрудничества все было разложено по полочкам,
+                                    причём не только нам, но и нашим родителям! Все пожелания были учтены. Подготовка
+                                    прошла душевно, спасибо за ваши ценные советы, за всех рекомендованных вами
+                                    подрядчиков, за терпение и внимание ко всем деталям!
+                                </p>
+                                <p class="review__paragraph">Само мероприятие прошло на высшем уровне, благодаря Насте
+                                    никакие организационные моменты не отвлекали нас от нашего праздника, которым
+                                    оставалось только наслаждаться! Не только мы, но и наши гости остались в восторге и
+                                    до сих пор вспоминают как все прошло!</p>
+                                <p class="review__paragraph">Отдельного спасибо заслуживают фотографии и их автор
+                                    Сергей! Потрясающий анонс, ждём с нетерпением остальных фото!!!</p>
+                                <p class="review__paragraph">Настя и Сергей, вы занимаетесь самым лучшим делом на свете:
+                                    дарите улыбки, хорошее настроение и потрясающие праздники! Нам было очень приятно
+                                    работать с вами! С такой командой и дождь не страшен! Даже его удалось избежать!</p>
+                                <div class="more">
+                                    <a href="#" class="more__link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide review">
+                        <div class="review__item">
+                            <h3 class="review__title">
+                                <svg class="review__quote" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     width="58" height="52" viewBox="0 0 508.044 508.044"
+                                     style="enable-background:new 0 0 508.044 508.044;"
+                                     xml:space="preserve">
+<g>
+	<g>
+		<path d="M0.108,352.536c0,66.794,54.144,120.938,120.937,120.938c66.794,0,120.938-54.144,120.938-120.938
+			s-54.144-120.937-120.938-120.937c-13.727,0-26.867,2.393-39.168,6.61C109.093,82.118,230.814-18.543,117.979,64.303
+			C-7.138,156.17-0.026,348.84,0.114,352.371C0.114,352.426,0.108,352.475,0.108,352.536z"/>
+        <path d="M266.169,352.536c0,66.794,54.144,120.938,120.938,120.938s120.938-54.144,120.938-120.938S453.9,231.599,387.106,231.599
+			c-13.728,0-26.867,2.393-39.168,6.61C375.154,82.118,496.875-18.543,384.04,64.303C258.923,156.17,266.034,348.84,266.175,352.371
+			C266.175,352.426,266.169,352.475,266.169,352.536z"/>
+	</g>
+</g>
+</svg>
+                                <span class="review__name">Камиль и Алсу</span>
+                            </h3>
+                            <div class="review__text">
+                                <p class="review__paragraph">Совсем недавно, у нас с супругом произошло грандиозное
+                                    событие! Мы поженились.
+                                </p>
+                                <p class="review__paragraph">К нашему удивлению, дату регистрации брака назначили самую
+                                    ближайшую. У нас было
+                                    всего несколько дней, чтобы определиться с фотографом. Я с утра до вечера изучала
+                                    различные сайты с услугами фотографов и совершенно случайно наткнулась на Алексея
+                                    Чернышева. Я изучила его работы и сразу поняла- это наш фотограф! Тут же мы
+                                    созвонились и согласовали все нюансы.</p>
+                                <p class="review__paragraph">Алексей оказался не только замечательным фотографом, но и
+                                    хорошим помощником в этот
+                                    волнительный день! Он подсказывал нам как правильно работать на камеру, помогал
+                                    справляться с волнением и вообще очень поднимал нам настроение своим присутствием.
+                                </p>
+                                <p class="review__paragraph">Результат фотосъемки нас очень очень порадовал! Мы даже не
+                                    ожидали, что нам
+                                    понравится абсолютно каждая фотография! С уверенность могу заявить, что мы с
+                                    удовольствием обратимся к Алексею ещё и не раз! Фотографии настолько качественные,
+                                    что их даже не нужно редактировать! Алексей сделал наш день! На съемке мы
+                                    чувствовали себя очень комфортно и были уверенны, что у нас будут идеальные снимки.
+                                    Так и получилось! Большое вам спасибо!</p>
+                                <div class="more">
+                                    <a href="#" class="more__link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide review">
+                        <div class="review__item">
+                            <h3 class="review__title">
+                                <svg class="review__quote" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     width="58" height="52" viewBox="0 0 508.044 508.044"
+                                     style="enable-background:new 0 0 508.044 508.044;"
+                                     xml:space="preserve">
+<g>
+	<g>
+		<path d="M0.108,352.536c0,66.794,54.144,120.938,120.937,120.938c66.794,0,120.938-54.144,120.938-120.938
+			s-54.144-120.937-120.938-120.937c-13.727,0-26.867,2.393-39.168,6.61C109.093,82.118,230.814-18.543,117.979,64.303
+			C-7.138,156.17-0.026,348.84,0.114,352.371C0.114,352.426,0.108,352.475,0.108,352.536z"/>
+        <path d="M266.169,352.536c0,66.794,54.144,120.938,120.938,120.938s120.938-54.144,120.938-120.938S453.9,231.599,387.106,231.599
+			c-13.728,0-26.867,2.393-39.168,6.61C375.154,82.118,496.875-18.543,384.04,64.303C258.923,156.17,266.034,348.84,266.175,352.371
+			C266.175,352.426,266.169,352.475,266.169,352.536z"/>
+	</g>
+</g>
+</svg>
+                                <span class="review__name">Кирилл и Юлия</span>
+                            </h3>
+                            <div class="review__text">
+                                <p class="review__paragraph">Хочу начать с того что Дмитрия посоветовал мне коллега по
+                                    работе я всегда ищу не только профессиональность в людях но и позитивный настрой,
+                                    отличное общение и человечность!</p>
+                                <p class="review__paragraph">Когда я набрала ему в первые очень переживала но на
+                                    другом конце трубки я услышала добрый и радостный голос ! Мне это так понравилось
+                                    !!! Хочу от себя сказать что когда вы выберите этого фотографа вы получите намного
+                                    больше!!! Он всегда на связи и ответит на все вопросы ( даже самые нелепые), он
+                                    всегда подскажет как сделать лучше и самое главное во время съёмок вы понимаете что
+                                    в надежных руках так как этот человек знает что делает и подчеркивает это своими
+                                    действиями!! Всегда успокоит и развеселит !!</p>
+                                <p class="review__paragraph">Димуля спасибо тебе за твою проделанную
+                                    работу и терпение!!! Удачи в карьере и всегда довольных заказчиков !!</p>
+                                <div class="more">
+                                    <a href="#" class="more__link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide review">
+                        <div class="review__item">
+                            <h3 class="review__title">
+                                <svg class="review__quote" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     width="58" height="52" viewBox="0 0 508.044 508.044"
+                                     style="enable-background:new 0 0 508.044 508.044;"
+                                     xml:space="preserve">
+<g>
+	<g>
+		<path d="M0.108,352.536c0,66.794,54.144,120.938,120.937,120.938c66.794,0,120.938-54.144,120.938-120.938
+			s-54.144-120.937-120.938-120.937c-13.727,0-26.867,2.393-39.168,6.61C109.093,82.118,230.814-18.543,117.979,64.303
+			C-7.138,156.17-0.026,348.84,0.114,352.371C0.114,352.426,0.108,352.475,0.108,352.536z"/>
+        <path d="M266.169,352.536c0,66.794,54.144,120.938,120.938,120.938s120.938-54.144,120.938-120.938S453.9,231.599,387.106,231.599
+			c-13.728,0-26.867,2.393-39.168,6.61C375.154,82.118,496.875-18.543,384.04,64.303C258.923,156.17,266.034,348.84,266.175,352.371
+			C266.175,352.426,266.169,352.475,266.169,352.536z"/>
+	</g>
+</g>
+</svg>
+                                <span class="review__name">Павел и Екатерина</span>
+                            </h3>
+                            <div class="review__text">
+                                <p class="review__paragraph">Хотим выразить огромную благодарность Ане, чье мастерство
+                                    поразило нас своим непревзойденным качеством, стилем и профессионализмом… </p>
+                                <p class="review__paragraph">С первых мгновений Аня произвела впечатление профессионала
+                                    своего дела, она рассказала нам не только о тонкостях удачной свадебной фотосессии,
+                                    но и поделилась опытом в иных сферах подготовки к свадьбе. А после просмотра работ
+                                    Ани у нас не осталось ни капли сомнений, что мы нашли Того Самого Фотографа.</p>
+                                <p class="review__paragraph">Работы Ани
+                                    отличаются непревзойденным мастерством, яркими красками, живыми эмоциями и морем
+                                    позитива. На протяжении всего периода подготовки к свадьбе Аня делилась с нами своим
+                                    богатым опытом, давала дельные советы, за которые хотелось бы выразить Ане отдельную
+                                    благодарность. Наши ожидания в работе с Аней подтвердились на все 100%, это было
+                                    одно удовольствие. В жизни мы довольно стеснительны перед камерой, но с Аней мы
+                                    чувствовали себя легко и непринуждённо, благодаря одному из ее главных качеств –
+                                    умению создать комфортные условия для чудесной, легкой и непринужденной фотосъемки.
+                                    Аня – лучшая, и мы с радостью будем обращаться к ней для создания непревзойденных
+                                    семейных фотосессий.</p>
+                                <div class="more">
+                                    <a href="#" class="more__link"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="reviews-swiper-nav">
+            <div class="reviews-swiper-button-next button-next"></div>
+            <div class="reviews-swiper-button-prev button-prev"></div>
+            <div class="reviews-swiper-pagination center-text"></div>
+        </div>
+        <div class="ellipses">
+            <svg class="review__ellipse-big ellipse"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="577.5px" height="567.5px">
+                <path fill-rule="evenodd" stroke="rgb(38, 30, 19)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M293.499,0.499 C378.507,0.499 497.536,3.255 506.636,97.316 C515.735,191.377 576.499,212.210 576.499,283.499 C576.499,346.800 569.133,440.250 520.602,452.387 C472.71,464.524 386.495,566.499 293.499,566.499 C212.165,566.499 213.98,475.732 87.222,477.249 C-38.654,478.766 10.499,358.461 10.499,283.499 C10.499,211.323 -16.582,133.394 81.995,95.466 C180.573,57.538 209.379,0.499 293.499,0.499 Z"/>
+            </svg>
+            <svg class="review__ellipse-small ellipse"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="180.5px" height="178.5px">
+                <path fill-rule="evenodd" stroke="rgb(179, 96, 16)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M92.999,0.499 C125.933,0.499 158.542,18.100 161.154,33.774 C163.766,49.447 179.499,72.943 179.499,86.999 C179.499,89.527 161.691,109.103 163.433,137.837 C165.175,166.572 130.54,173.499 92.999,173.499 C71.62,173.499 27.76,189.316 35.783,151.874 C44.490,114.432 6.499,112.834 6.499,86.999 C6.499,67.219 -13.131,34.418 24.310,34.418 C61.752,34.418 65.7,0.499 92.999,0.499 Z"/>
+            </svg>
+        </div>
+        <div class="ellipses-mobile">
+            <svg class="review__ellipse-big_mobile ellipse"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="157.5px" height="155.5px">
+                <path fill-rule="evenodd" stroke="rgb(38, 30, 19)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" opacity="0.302" fill="none"
+                      d="M79.783,0.499 C102.827,0.499 135.94,1.249 137.561,26.841 C140.27,52.433 156.499,58.102 156.499,77.499 C156.499,94.722 154.503,120.148 141.347,123.450 C128.191,126.753 104.993,154.499 79.783,154.499 C57.734,154.499 57.987,129.802 23.864,130.215 C-10.258,130.628 3.66,97.895 3.66,77.499 C3.66,57.861 -4.274,36.658 22.448,26.338 C49.171,16.18 56.979,0.499 79.783,0.499 Z"/>
+            </svg>
+            <svg class="review__ellipse-small_mobile ellipse"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="151.5px" height="150.5px">
+                <path fill-rule="evenodd" stroke="rgb(179, 96, 16)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" opacity="0.302" fill="none"
+                      d="M77.655,0.499 C105.389,0.499 132.850,15.373 135.50,28.618 C137.250,41.864 150.499,61.721 150.499,73.599 C150.499,75.735 135.503,92.279 136.969,116.562 C138.436,140.846 108.860,146.700 77.655,146.700 C59.181,146.700 22.138,160.66 29.471,128.424 C36.804,96.782 4.810,95.432 4.810,73.599 C4.810,56.884 -11.721,29.163 19.809,29.163 C51.341,29.163 54.82,0.499 77.655,0.499 Z"/>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<section class="consultation wow animate__fadeInUpBig" id="consultation">
+    <div class="container consultation__container">
+        <h2 class="consultation__title">
+            <span class="title center-text">Запишитесь на&nbsp;консультацию</span>
+        </h2>
+        <div class="consultation__subtitle center-text">Запишитесь на бесплатную консультацию с нашей командой.
+            Мы&nbsp;будем рады познакомиться с вашей историей!
+        </div>
+        <div class="consultation__form">
+            <div class="consultation__form-text center-text">
+                Чтобы назначить дату встречи, или уточнить какой-то вопрос, пожалуйста,
+                заполните форму ниже
+            </div>
+            <form class="consultation__form-content form">
+                <div class="input-validate">
+                    <input type="text" class="form__input" placeholder="Ваше имя">
+                    <div class="error">Поле обязательно для заполнения!</div>
+                </div>
+                <div class="input-validate">
+                    <input type="tel" class="form__input" placeholder="Ваш телефон">
+                    <div class="error">Поле обязательно для заполнения!</div>
+                </div>
+                <button class="btn btn__action">Записаться</button>
+            </form>
+            <div class="form-sent center-text">Спасибо, мы свяжемся с вами в ближайшее время!</div>
+        </div>
+    </div>
+</section>
+
+<section class="contacts" id="contacts">
+    <div class="container contacts__container">
+        <div class="contacts__card card wow animate__backInRight">
+            <h2 class="contacts__title center-text"><span class="title">Контакты</span></h2>
+            <div class="contacts__list">
+                <div class="contacts__item">
+                    Адрес офиса:
+                    <span class="contacts__item_bold">г. Москва, Пресненская наб., 6, стр. 2</span>
+                </div>
+                <div class="contacts__item">
+                    Время работы офиса:
+                    <span class="contacts__item_bold">Ежедневно с 9:00 до 21:00</span>
+                </div>
+                <div class="contacts__item">
+                    Телефон офиса:
+                    <span class="contacts__item_bold">+ 7 (926) 417-81-27</span>
+                </div>
+            </div>
+            <div class="social">
+                <a href="https://facebook.com/" class="social__link" target="_blank">
+                    <svg version="1.1" class="social__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                         viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<g>
+		<path d="M325.581,111.282h46.654c9.995,0,18.128-8.132,18.128-18.128V18.187c0-9.996-8.132-18.128-18.128-18.128H308.17
+			C307.556,0.033,306.489,0,304.994,0c-12.088,0-54.123,2.385-87.472,33.064c-36.401,33.493-32.918,73.557-31.386,83.435v48.84
+			h-46.371c-9.995,0-18.128,8.132-18.128,18.128v80.629c0,9.997,8.132,18.13,18.128,18.13h43.688v211.647
+			c0,9.995,8.132,18.128,18.128,18.128h91.368c9.995,0,18.128-8.133,18.128-18.128V283.271h51.749
+			c9.214,0,16.956-6.903,18.009-16.056l9.409-81.672c0.591-5.131-1.04-10.285-4.477-14.14c-3.437-3.853-8.368-6.063-13.53-6.063
+			h-61.156v-40.997C311.079,115.872,313.39,111.282,325.581,111.282z M300.881,185.739h68.807l-8.886,77.134h-59.924
+			c-5.632,0-10.199,4.566-10.199,10.199v218.53H203.85V272.026c0-5.633-4.567-10.199-10.199-10.199h-51.617v-76.09h54.301
+			c5.632,0,10.199-4.566,10.199-10.199V115.67c0-0.585-0.05-1.17-0.15-1.747c-1.075-6.175-4.918-38.365,24.95-65.847
+			c27.915-25.681,63.439-27.677,73.661-27.677c1.433,0,2.286,0.038,2.442,0.046c0.168,0.008,0.336,0.012,0.504,0.012h62.026v70.428
+			h-44.385c-21.854,0-34.901,12.508-34.901,33.458v51.196C290.681,181.173,295.249,185.739,300.881,185.739z"/>
+	</g>
+</g>
+                        <g>
+	<g>
+		<path d="M224.382,343.713c-5.632,0-10.199,4.566-10.199,10.199v5.1c0,5.633,4.567,10.199,10.199,10.199
+			c5.632,0,10.199-4.566,10.199-10.199v-5.1C234.581,348.279,230.013,343.713,224.382,343.713z"/>
+	</g>
+</g>
+                        <g>
+	<g>
+		<path d="M224.382,381.45c-5.632,0-10.199,4.566-10.199,10.199v77.514c0,5.633,4.567,10.199,10.199,10.199
+			c5.632,0,10.199-4.566,10.199-10.199v-77.514C234.581,386.016,230.013,381.45,224.382,381.45z"/>
+	</g>
+</g>
+</svg>
+                </a>
+                <a href="https://vk.com/" class="social__link" target="_blank">
+                    <svg version="1.1" class="social__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                         viewBox="0 0 511.998 511.998" xml:space="preserve">
+<g>
+	<g>
+		<path d="M489.25,335.681c-11.137-13.347-23.719-25.264-35.888-36.789c-4.276-4.051-8.7-8.24-12.96-12.399
+			c-0.001-0.001-0.002-0.002-0.003-0.003c-5.73-5.589-8.535-9.556-8.828-12.486c-0.288-2.88,1.68-7.153,6.207-13.469
+			c6.769-9.5,13.984-19.016,20.964-28.218c6.204-8.18,12.618-16.639,18.766-25.146l1.38-1.91
+			c11.995-16.602,24.397-33.769,31.043-54.689c1.898-5.998,3.869-14.874-0.885-22.666c-4.756-7.794-13.573-10.104-19.787-11.162
+			c-3.035-0.52-5.915-0.563-8.595-0.563l-77.806-0.069c-13.452-0.224-22.784,6.152-27.87,18.956
+			c-4.07,10.226-8.877,22.077-14.446,33.319c-10.655,21.703-24.194,46.7-43.818,67.527l-0.872,0.928
+			c-1.336,1.426-3.519,3.758-4.64,4.293c-2.126-1.336-4.579-8.977-4.467-12.98c0.003-0.099,0.004-0.197,0.004-0.295l-0.069-89.903
+			c0-0.457-0.032-0.914-0.093-1.367c-1.745-12.826-5.147-25.684-25.447-29.69c-0.651-0.129-1.313-0.193-1.975-0.193h-80.935
+			c-15.227,0-23.281,6.973-29.738,14.533c-1.869,2.204-6.835,8.056-4.305,15.21c2.56,7.239,10.188,8.684,12.692,9.158
+			c8.82,1.674,13.381,6.659,14.793,16.189c2.791,18.517,3.133,38.326,1.078,62.309c-0.573,6.439-1.639,11.333-3.359,15.403
+			c-0.476,1.127-0.894,1.825-1.186,2.236c-0.466-0.188-1.191-0.548-2.195-1.235c-6.198-4.241-10.869-10.834-15.386-17.208
+			c-18.042-25.473-33.218-53.607-46.401-86.022c-5.429-13.283-15.635-20.702-28.719-20.894c-24.928-0.415-47.983-0.405-70.459,0.032
+			c-10.601,0.184-18.035,3.521-22.099,9.92c-4.069,6.411-3.92,14.585,0.444,24.299c31.196,69.37,59.522,119.834,91.842,163.628
+			c22.757,30.832,45.665,52.234,72.092,67.354c27.766,15.885,59.08,23.67,95.408,23.669c4.131,0,8.334-0.101,12.593-0.304
+			c22.413-1.021,31.532-9.936,32.527-31.765c0.558-11.537,1.842-20.883,6.297-29.003c1.246-2.273,2.652-3.797,3.76-4.076
+			c1.178-0.294,3.267,0.427,5.59,1.936c4.247,2.758,7.904,6.498,10.911,9.781c3.048,3.337,6.128,6.784,9.109,10.117
+			c6.343,7.097,12.902,14.436,19.774,21.436c15.543,15.844,33.461,23.11,53.278,21.588l71.205,0.033c0.002,0,0.003,0,0.004,0
+			c0.226,0,0.452-0.007,0.678-0.022c8.213-0.547,15.314-5.094,19.484-12.478c5.021-8.892,4.945-20.155-0.207-30.14
+			C502.359,352.01,495.384,343.075,489.25,335.681z M490.181,382.502c-0.982,1.739-2.193,2.056-2.818,2.132l-71.19-0.033
+			c-0.002,0-0.004,0-0.007,0c-0.281,0-0.562,0.011-0.841,0.035c-14.025,1.168-25.946-3.762-37.474-15.512
+			c-6.539-6.662-12.937-13.819-19.124-20.741c-3.015-3.373-6.132-6.862-9.264-10.29c-3.884-4.242-8.685-9.117-14.854-13.123
+			c-9.236-5.995-16.89-5.814-21.683-4.606c-4.743,1.195-11.485,4.605-16.66,14.049c-6.704,12.219-8.183,25.401-8.785,37.854
+			c-0.348,7.616-1.636,9.628-2.174,10.139c-0.705,0.67-3.061,1.848-10.922,2.207c-37.776,1.776-69.478-4.989-96.931-20.696
+			c-23.882-13.664-44.794-33.291-65.809-61.762c-31.425-42.579-59.075-91.887-89.65-159.877c-1.108-2.463-1.45-4-1.549-4.823
+			c0.78-0.256,2.304-0.593,4.976-0.642c22.248-0.431,45.062-0.443,69.765-0.031c3.382,0.05,7.233,1.065,10.149,8.2
+			c13.774,33.869,29.685,63.344,48.645,90.112c5.034,7.105,11.3,15.949,20.509,22.25c8.435,5.776,15.28,5.5,19.538,4.252
+			c4.26-1.249,10.172-4.719,14.154-14.147c2.569-6.077,4.122-12.92,4.891-21.566c2.197-25.653,1.807-46.981-1.225-67.098
+			c-2.137-14.413-9.579-24.825-21.302-30.142c2.082-1.084,4.428-1.536,7.686-1.536h79.877c4.494,1.008,5.384,2.192,5.689,2.597
+			c1.294,1.721,2.034,5.792,2.486,8.973l0.068,89.074c-0.18,8.539,3.97,27.477,18.1,32.67c0.116,0.043,0.233,0.083,0.35,0.121
+			c12.864,4.204,21.373-4.877,25.941-9.756l0.814-0.866c21.496-22.815,35.971-49.473,47.28-72.508
+			c5.894-11.895,10.886-24.199,15.107-34.805c2.112-5.319,4.034-6.195,8.62-6.098c0.063,0.002,0.125,0.002,0.189,0.002l77.905,0.069
+			c1.812,0,3.703,0.021,5.17,0.272c3.712,0.632,5.241,1.402,5.745,1.721c0.052,0.591,0.04,2.291-1.082,5.839
+			c-5.651,17.789-16.572,32.903-28.133,48.905l-1.381,1.913c-6.007,8.312-12.35,16.675-18.483,24.764
+			c-7.07,9.321-14.378,18.958-21.307,28.684c-14.814,20.669-13.512,34.385,4.975,52.417c4.369,4.265,8.847,8.507,13.179,12.609
+			c12.281,11.633,23.882,22.62,34.235,35.026c5.42,6.534,11.564,14.381,16.042,23.029
+			C491.954,376.286,491.381,380.376,490.181,382.502z"/>
+	</g>
+</g>
+                        <g>
+	<g>
+		<path d="M74.382,169.635c-1.498-2.964-2.983-5.936-4.454-8.914c-2.496-5.049-8.608-7.123-13.661-4.627
+			c-5.05,2.495-7.122,8.611-4.627,13.661c1.499,3.034,3.012,6.062,4.537,9.081c1.795,3.552,5.386,5.6,9.11,5.6
+			c1.546,0,3.117-0.353,4.592-1.098C74.908,180.796,76.923,174.662,74.382,169.635z"/>
+	</g>
+</g>
+                        <g>
+	<g>
+		<path d="M138.353,275.441c-16.724-22.659-32.37-47.27-47.83-75.239c-2.725-4.93-8.931-6.716-13.86-3.992
+			c-4.929,2.725-6.717,8.931-3.992,13.86c15.896,28.756,32.013,54.102,49.271,77.485c2,2.71,5.087,4.143,8.214,4.143
+			c2.104,0,4.226-0.648,6.048-1.995C140.735,286.359,141.697,279.974,138.353,275.441z"/>
+	</g>
+</g>
+</svg>
+                </a>
+                <a href="https://www.instagram.com/" class="social__link" target="_blank">
+                    <svg version="1.1" class="social__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                         viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<path d="M359.312,0H152.689C68.849,0,0.64,68.208,0.64,152.049v207.903C0.64,443.792,68.849,512,152.689,512h206.623
+				c83.839,0,152.048-68.208,152.048-152.048V152.049C511.359,68.208,443.151,0,359.312,0z M490.961,359.951
+				c0,72.593-59.057,131.65-131.649,131.65H152.689c-72.593,0-131.65-59.057-131.65-131.649V152.049
+				c0-72.593,59.057-131.65,131.65-131.65h206.623c72.592,0,131.649,59.057,131.649,131.65V359.951z"/>
+            <path d="M359.312,58.294H152.689c-51.698,0-93.756,42.057-93.756,93.755v207.904c0,51.697,42.058,93.755,93.756,93.755h206.623
+				c51.697,0,93.755-42.058,93.755-93.755V152.049C453.067,100.352,411.009,58.294,359.312,58.294z M432.669,359.951
+				c0,40.449-32.908,73.357-73.357,73.357H152.689c-40.45,0-73.358-32.908-73.358-73.357V152.048
+				c0-40.449,32.908-73.357,73.358-73.357v0.001h206.623c40.449,0,73.357,32.908,73.357,73.357V359.951z"/>
+		</g>
+	</g>
+</g>
+                        <g>
+	<g>
+		<g>
+			<path d="M256,124.178c-72.686,0-131.821,59.135-131.821,131.822S183.313,387.821,256,387.821S387.821,328.687,387.821,256
+				S328.686,124.178,256,124.178z M256,367.422c-61.438,0-111.422-49.984-111.422-111.422c0-61.439,49.984-111.423,111.422-111.423
+				c61.439,0,111.422,49.984,111.422,111.423C367.422,317.438,317.438,367.422,256,367.422z"/>
+            <path d="M256,181.041c-41.332,0-74.959,33.627-74.959,74.959s33.627,74.959,74.959,74.959c41.333,0,74.959-33.627,74.959-74.959
+				S297.332,181.041,256,181.041z M256,310.561c-30.085,0-54.561-24.476-54.561-54.561s24.476-54.561,54.561-54.561
+				s54.561,24.475,54.561,54.561C310.561,286.085,286.085,310.561,256,310.561z"/>
+		</g>
+	</g>
+</g>
+                        <g>
+	<g>
+		<path d="M380.485,99.843c-17.464,0-31.673,14.208-31.673,31.673s14.208,31.672,31.673,31.672
+			c17.463,0,31.672-14.207,31.672-31.672S397.948,99.843,380.485,99.843z M380.485,142.789c-6.216,0-11.274-5.057-11.274-11.273
+			c0-6.217,5.058-11.274,11.274-11.274s11.273,5.058,11.273,11.274C391.759,137.732,386.702,142.789,380.485,142.789z"/>
+	</g>
+</g>
+                        <g>
+	<g>
+		<path d="M239.681,463.044h-95.872c-5.633,0-10.199,4.566-10.199,10.199s4.566,10.199,10.199,10.199h95.872
+			c5.633,0,10.199-4.566,10.199-10.199S245.314,463.044,239.681,463.044z"/>
+	</g>
+</g>
+                        <g>
+	<g>
+		<path d="M278.438,463.044h-6.12c-5.632,0-10.199,4.566-10.199,10.199s4.567,10.199,10.199,10.199h6.12
+			c5.633,0,10.199-4.566,10.199-10.199S284.07,463.044,278.438,463.044z"/>
+	</g>
+</g>
+</svg>
+                </a>
+            </div>
+        </div>
+        <div id="map" class="map wow animate__backInLeft"></div>
+        <div class="ellipses">
+            <svg class="ellipse contacts__elipse-big" xmlns="http://www.w3.org/2000/svg" width="636.5px"
+                 height="632.5px">
+                <path fill-rule="evenodd" stroke="rgb(38, 30, 19)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M311.499,0.499 C396.57,0.499 439.100,76.384 528.794,89.3 C618.487,101.623 622.499,224.296 622.499,311.499 C622.499,372.653 672.467,494.601 574.365,477.775 C476.263,460.949 422.107,622.499 311.499,622.499 C220.141,622.499 64.268,673.219 81.85,520.382 C97.903,367.544 0.499,391.902 0.499,311.499 C0.499,233.417 10.930,124.268 76.799,107.442 C142.667,90.616 217.821,0.499 311.499,0.499 Z"/>
+            </svg>
+            <svg class="ellipse contacts__elipse-small" xmlns="http://www.w3.org/2000/svg" width="164.5px"
+                 height="166.5px">
+                <path fill-rule="evenodd" stroke="rgb(179, 96, 16)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" fill="none"
+                      d="M80.999,3.499 C104.62,3.499 143.784,7.490 139.536,28.739 C135.288,49.988 161.499,62.603 161.499,83.999 C161.499,106.775 171.883,141.984 136.839,141.984 C101.794,141.984 102.683,164.499 80.999,164.499 C55.773,164.499 12.125,168.733 18.497,134.735 C24.869,100.737 0.499,103.232 0.499,83.999 C0.499,62.29 19.323,64.774 23.570,27.589 C27.818,-9.596 58.511,3.499 80.999,3.499 Z"/>
+            </svg>
+        </div>
+        <div class="ellipses-mobile">
+            <svg class="ellipse contacts__elipse-big_mobile"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="116.5px" height="116.5px">
+                <path fill-rule="evenodd" stroke="rgb(38, 30, 19)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" opacity="0.302" fill="none"
+                      d="M56.847,0.499 C72.168,0.499 79.966,14.350 96.217,16.652 C112.468,18.955 113.195,41.346 113.195,57.262 C113.195,68.423 122.248,90.681 104.474,87.610 C86.699,84.539 76.887,114.25 56.847,114.25 C40.295,114.25 12.53,123.282 15.100,95.387 C18.147,67.491 0.500,71.936 0.500,57.262 C0.500,43.10 2.389,23.88 14.324,20.18 C26.258,16.947 39.874,0.499 56.847,0.499 Z"/>
+            </svg>
+            <svg class="ellipse contacts__elipse-small_mobile"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 width="132.5px" height="132.5px">
+                <path fill-rule="evenodd" stroke="rgb(179, 96, 16)" stroke-width="1px" stroke-linecap="butt"
+                      stroke-linejoin="miter" opacity="0.302" fill="none"
+                      d="M65.420,2.300 C84.19,2.300 116.53,5.500 112.628,22.536 C109.202,39.570 130.340,49.684 130.340,66.837 C130.340,85.96 138.714,113.323 110.452,113.323 C82.190,113.323 82.907,131.373 65.420,131.373 C45.76,131.373 9.875,134.768 15.14,107.512 C20.152,80.255 0.499,82.256 0.499,66.837 C0.499,49.223 15.680,51.424 19.105,21.613 C22.531,-8.198 47.284,2.300 65.420,2.300 Z"/>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer__container">
+        <div class="logo">
+            <img src="images/logo.png" class="logo__img" alt="Логотип">
+        </div>
+        <div class="copyright">«БестДэй» © Все права защищены, 2020</div>
+    </div>
+</footer>
+
+<div class="modal" id="modal-gallery">
+    <div class="modal__wrapper">
+        <div class="modal-gallery">
+            <h2 class="modal-gallery__title portfolio__title center-text"><span class="title"></span></h2>
+            <div class="swiper modal-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="modal-swiper__image">
+                            <img class="swiper-img" src="images/gallery/photo-1.png" alt="Свадебные фотографии">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="modal-swiper__image">
+                            <img class="swiper-img" src="images/gallery/photo-2.png" alt="Свадебные фотографии">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="modal-swiper__image">
+                            <img class="swiper-img" src="images/gallery/photo-3.png" alt="Свадебные фотографии">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="modal-swiper__image">
+                            <img class="swiper-img" src="images/gallery/photo-4.png" alt="Свадебные фотографии">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="modal-swiper__image">
+                            <img class="swiper-img" src="images/gallery/photo-5.png" alt="Свадебные фотографии">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-swiper-button-next button-next button-next-big"></div>
+                <div class="modal-swiper-button-prev button-prev button-prev-big"></div>
+                <div class="modal-gallery-swiper-nav">
+                    <div class="modal-swiper-button-next button-next"></div>
+                    <div class="modal-swiper-button-prev button-prev"></div>
+                    <div class="modal-swiper-pagination center-text"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal_container">
+            <div class="swiper preview-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="preview-image">
+                            <img class="modal-swiper-pagination-img" src="images/gallery/photo-1-prev.png"
+                                 alt="Свадебные фотографии" data-index="0">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="preview-image">
+                            <img class="modal-swiper-pagination-img" src="images/gallery/photo-2-prev.png"
+                                 alt="Свадебные фотографии" data-index="1">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="preview-image">
+                            <img class="modal-swiper-pagination-img" src="images/gallery/photo-3-prev.png"
+                                 alt="Свадебные фотографии" data-index="2">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="preview-image">
+                            <img class="modal-swiper-pagination-img" src="images/gallery/photo-4-prev.png"
+                                 alt="Свадебные фотографии" data-index="3">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="preview-image">
+                            <img class="modal-swiper-pagination-img" src="images/gallery/photo-5-prev.png"
+                                 alt="Свадебные фотографии" data-index="4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-gallery__action">
+                <a href="#" class="modal-gallery__link">Открыть все фотографии</a>
+            </div>
+            <div id="gallery-close" class="close gallery__close">
+                <svg version="1.1" id="modal__close" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 496.096 496.096" fill="#906841B8" xml:space="preserve">
+<g>
+	<g>
+		<path d="M259.41,247.998L493.754,13.654c3.123-3.124,3.123-8.188,0-11.312c-3.124-3.123-8.188-3.123-11.312,0L248.098,236.686
+			L13.754,2.342C10.576-0.727,5.512-0.639,2.442,2.539c-2.994,3.1-2.994,8.015,0,11.115l234.344,234.344L2.442,482.342
+			c-3.178,3.07-3.266,8.134-0.196,11.312s8.134,3.266,11.312,0.196c0.067-0.064,0.132-0.13,0.196-0.196L248.098,259.31
+			l234.344,234.344c3.178,3.07,8.242,2.982,11.312-0.196c2.995-3.1,2.995-8.016,0-11.116L259.41,247.998z"/>
+	</g>
+</g>
+</svg>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="modal" id="modal-callback">
+    <div class="callback">
+        <div class="callback__title center-text"><span class="title">Заказать звонок</span></div>
+        <div class="callback__subtitle">Оставьте заявку и мы перезвоним Вам в течении 15 минут.</div>
+        <form action="" class="callback__form">
+            <div class="input-validate">
+                <input type="text" class="form__input callback__form-input" placeholder="Ваше имя">
+                <div class="error">Поле обязательно для заполнения!</div>
+            </div>
+            <div class="input-validate">
+                <input type="tel" class="form__input callback__form-input"
+                       placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+                <div class="error">Поле обязательно для заполнения!</div>
+            </div>
+            <button class="btn btn__primary btn__callback">Заказать звонок</button>
+            <div class="form__confirm center-text">Нажимая на кнопку, Вы соглашаетесь на
+                <a href="#" class="form__confirm-link">Обработку персональных данных</a></div>
+        </form>
+        <div class="form-sent center-text">Спасибо, мы свяжемся с вами в ближайшее время!</div>
+        <div id="callback-close" class="close callback__close">
+            <svg version="1.1" id="modal__close" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 496.096 496.096" fill="#906841B8" xml:space="preserve">
+<g>
+	<g>
+		<path d="M259.41,247.998L493.754,13.654c3.123-3.124,3.123-8.188,0-11.312c-3.124-3.123-8.188-3.123-11.312,0L248.098,236.686
+			L13.754,2.342C10.576-0.727,5.512-0.639,2.442,2.539c-2.994,3.1-2.994,8.015,0,11.115l234.344,234.344L2.442,482.342
+			c-3.178,3.07-3.266,8.134-0.196,11.312s8.134,3.266,11.312,0.196c0.067-0.064,0.132-0.13,0.196-0.196L248.098,259.31
+			l234.344,234.344c3.178,3.07,8.242,2.982,11.312-0.196c2.995-3.1,2.995-8.016,0-11.116L259.41,247.998z"/>
+	</g>
+</g>
+</svg>
+        </div>
+    </div>
+</div>
+
+<script src="dist/lib/jquery-3.6.0.min.js"></script>
+<script src="dist/lib/jquery.mask.min.js"></script>
+<script src="dist/lib/dotdotdot.js"></script>
+<script src="dist/lib/swiper-bundle.min.js"></script>
+<script src="dist/lib/wow.min.js"></script>
+<script src="dist/script.min.js"></script>
+</body>
+</html>
